@@ -6,7 +6,7 @@ WORKDIR /opt
 
 RUN npm install && npm run build
 
-RUN apk update && apk add apache2 -y
+RUN apk update && apk add apache2
 
 # dist/index.html --> /var/www/html/ 
 
