@@ -9,6 +9,8 @@ COPY . /opt/
 
 WORKDIR /opt
 
+RUN rm -rf src/main/resources/application.properties
+
 COPY application.properties src/main/resources/application.properties
 
 RUN mvn clean package

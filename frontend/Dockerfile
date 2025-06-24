@@ -8,6 +8,10 @@ RUN npm install && npm run build
 
 RUN apk update && apk add apache2 -y
 
+# dist/index.html --> /var/www/html/ 
+
 EXPOSE 80
 
-ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
+CMD ["apachectl", "-D", "FOREGROUND"]
+
+# ENTRYPOINT ["apachectl", "-D", "FOREGROUND"]
