@@ -56,3 +56,16 @@ EXIT;
 3. DB_PASS = redhat
 4. DB_PORT = 3306
 5. DB_NAME = student_db
+
+
+mvn clean package 
+build+test
+Frontend
+
+
+docker build . 
+
+30 build. run 
+
+docker compose
+
