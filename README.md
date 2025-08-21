@@ -58,19 +58,5 @@ EXIT;
 5. DB_NAME = student_db
 
 
-mvn clean package 
-build+test
-Frontend
-
-
-docker build . 
-
 
 THIS CHANGES IS FOR JENKINS WEBHOOK TEST
-
-
-30 build. run 
-
-docker compose
-
-
