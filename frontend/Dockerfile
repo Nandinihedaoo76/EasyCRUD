@@ -4,12 +4,15 @@ WORKDIR /opt
 
 COPY . .
 
-RUN npm install && npm run build
+RUN npm install 
 
-RUN apk add apache2
+# && npm run build
 
-RUN cp -rf dist/* /var/www/localhost/htdocs/
+# RUN apk add apache2
 
-EXPOSE 80
+# RUN cp -rf dist/* /var/www/localhost/htdocs/
 
-CMD ["httpd", "-D", "FOREGROUND"]
+EXPOSE 5173
+
+#CMD ["httpd", "-D", "FOREGROUND"]
+ENTRYPOINT [ "npm", "run", "--host", "dev" ]
