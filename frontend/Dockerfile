@@ -8,7 +8,7 @@ RUN npm install && npm run build
 
 RUN apk add apache2
 
-COPY dist/ /var/www/localhost/htdocs/
+RUN cp dist/* /var/www/localhost/htdocs/
 
 EXPOSE 80
 
