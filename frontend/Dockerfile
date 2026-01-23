@@ -10,6 +10,6 @@ RUN apk add apache2
 
 COPY dist/ /var/www/localhost/htdocs/
 
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["httpd", "-D", "FOREGROUND"]
