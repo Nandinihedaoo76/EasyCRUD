@@ -4,9 +4,12 @@ WORKDIR /opt
 
 COPY . .
 
-RUN npm install
+RUN npm install && npm run build
+
+RUN apk add apache2
+
+COPY dist/ /var/www/localhost/htdocs/
 
 EXPOSE 3000
 
-ENTRYPOINT [ "npm", "run", "--host", "dev" ]
-
+CMD ["httpd", "-D", "FOREGROUND"]
