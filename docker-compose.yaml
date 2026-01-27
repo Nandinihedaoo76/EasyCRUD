@@ -3,7 +3,7 @@ services:
     image: mariadb:latest
     environment:
       MARIADB_ROOT_PASSWORD: "redhat"
-      DB_NAME: "studentapp"
+      MARIADB_DATABASE: "studentapp"
     volumes:
       - "my-vol123:/var/lib/mysql"
     ports:
