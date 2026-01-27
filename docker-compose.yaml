@@ -4,7 +4,7 @@ database:
     MARIADB_ROOT_PASSWORD: "redhat"
     DB_NAME: "studentapp"
   volume:
-    - "my-vol123:/var/lib/mysql"
+    my-vol123: /var/lib/mysql
   ports:
     - "3306:3306"
 
