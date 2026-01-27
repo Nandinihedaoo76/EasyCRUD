@@ -8,7 +8,6 @@ database:
   ports:
     - "3306:3306"
 
-
 backend:
   build: ./backend
   ports:
@@ -18,6 +17,8 @@ backend:
     DB_USER: "root"
     DB_PASSWORD: "redhat"
     DB_HOST: "database"
+  depends_on:
+    - database
 
 frontend:
   build: ./frontend
@@ -25,8 +26,11 @@ frontend:
     - "80:80"
   environment:
     PUBLIC_IP: "13.212.151.46"
+  depends_on:
+    - backend
 
-volume:
-  - "my-vol123"
+volumes:
+  my-vol123: {}
+
 
 
