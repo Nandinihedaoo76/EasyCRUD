@@ -3,6 +3,8 @@ database:
   environment:
     MARIADB_ROOT_PASSWORD: "redhat"
     DB_NAME: "studentapp"
+  volume:
+    - "my-vol123:/var/lib/mysql"
   ports:
     - "3306:3306"
 
@@ -23,4 +25,8 @@ frontend:
     - "80:80"
   environment:
     PUBLIC_IP: "13.212.151.46"
+
+volume:
+  - "my-vol123"
+
 
